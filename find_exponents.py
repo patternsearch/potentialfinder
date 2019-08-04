@@ -38,7 +38,7 @@ def find_exponents(df,
     :param dbl r_s_threshold: only show and plot results with an r squared lower than x
     :param int maxrows: specify the maximum number of rows. If df.rowsize > maxrows a random sample of rows is used
     :param bln debug: raise errors instead of continuing if True
-    :return: A Pandas dataframe with a list of all date and metric column combinations with their exponential factor and R²
+    :return: A Pandas dataframe with a list of all date and metric column combinations with their exponential factor and RÂ²
     :rtype: dataframe
     '''
     ######################## Functions: #########################
@@ -61,7 +61,7 @@ def find_exponents(df,
         r_squared=r*r
         printL('slope: '+str(slope))
         printL('intercept:'+str(intercept))
-        printL('r²:'+str(r))
+        printL('rÂ²:'+str(r))
         #k, m = np.polyfit(x, np.log(y), 1)
         return slope,intercept,r_squared
 
@@ -312,7 +312,7 @@ def find_exponents(df,
                     #plotting additional information:
                     plt.annotate("ex="+str(round(slope,4)), xy=(0.95,0.95),xycoords='axes fraction',
                      fontsize=fontsize_plot)
-                    plt.annotate("r²="+str(round(r_s,4)), xy=(0.95,0.90),xycoords='axes fraction',
+                    plt.annotate("rÂ²="+str(round(r_s,4)), xy=(0.95,0.90),xycoords='axes fraction',
                      fontsize=fontsize_plot)
                     plt.title(datetimecol+"~"+numericcol + " (fraction: last "+str(100*fractionToAnalyze)+"%)", fontsize=14)
                     plt.yscale('log')
@@ -342,7 +342,7 @@ def find_exponents(df,
                     #plotting additional information:
                     plt.annotate("ex="+str(round(slope,4)), xy=(0.95,0.95),xycoords='axes fraction',
                      fontsize=fontsize_plot)
-                    plt.annotate("r²="+str(round(r_s,4)), xy=(0.95,0.90),xycoords='axes fraction',
+                    plt.annotate("rÂ²="+str(round(r_s,4)), xy=(0.95,0.90),xycoords='axes fraction',
                      fontsize=fontsize_plot)
                     plt.title(datetimecol+"~"+numericcol + " (fraction: last "+str(100*fractionToAnalyze)+"%)", fontsize=14)
                     if min0: #only set min y axis if 0 values are existing:
@@ -368,9 +368,9 @@ def find_exponents(df,
 
         #exponent_scaled = normalize(list(df_result['exponent']))
 
-        #r² is already scaled, but we want a higher score for lower r values:
+        #rÂ² is already scaled, but we want a higher score for lower r values:
         #r_prepared=1-r #a low r should lead to a higher score
-        #it is much more important, that is is a power law (low r²), a high exponent is rather secondary --> weight
+        #it is much more important, that is is a power law (low rÂ²), a high exponent is rather secondary --> weight
         #weight_factor_exponent=100
        
         #sort_score=[(weight_factor_exponent*r_prepared+x)/(weight_factor_exponent+1) for x in exponent_scaled]
