@@ -1,4 +1,4 @@
-ï»¿import os
+import os
 import pandas as pd
 import numpy as np
 from scipy.stats import linregress
@@ -21,6 +21,7 @@ def find_exponents(df,
                    r_s_threshold=0.9,
                    maxrows=5000,
                    debug=False):
+
     '''
     find and plot plot exponential data in a pandas dataframe
 
@@ -40,9 +41,6 @@ def find_exponents(df,
     :return: A Pandas dataframe with a list of all date and metric column combinations with their exponential factor and R²
     :rtype: dataframe
     '''
-   
-    
-    
     ######################## Functions: #########################
     def is_nan(x):
         return (x is np.nan or x != x)
