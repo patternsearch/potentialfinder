@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import math
 import sys
-from dateutil.parser import parse
 import pathlib
 
 def find_exponents(df,
