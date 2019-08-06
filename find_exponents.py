@@ -21,8 +21,6 @@ def find_exponents(df,
                    r_s_threshold=0.9,
                    maxrows=5000,
                    debug=False):
-
-    
     '''
     find and plot plot exponential data in a pandas dataframe 
 
