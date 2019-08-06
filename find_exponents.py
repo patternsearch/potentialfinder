@@ -23,7 +23,7 @@ def find_exponents(df,
                    debug=False):
 
     '''
-    find and plot plot exponential data in a pandas dataframe
+    find and plot plot exponential data in a pandas dataframe 
 
     :param dataframe df: The dataframe containing date-like and metric columns
     :param str fractionToAnalyze: The last xx percent (0.0-1.0) of data (indexed by the found date columns)
